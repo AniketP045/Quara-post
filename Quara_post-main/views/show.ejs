@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include("includes/nav.ejs") %>
+
+
+        <div class="container-md">
+            <h2>Here your post in details</h2>
+            <div class="card">
+                <div class="card-header text-bg-primary p-3">
+                    <h4><b> @<%= post.username %></b></h4>
+                </div>
+                <div class="card-body text-bg-light p-3 ">
+                    <figure>
+                        <blockquote class="blockquote">
+                            <h5> Post id : <%= post.id %>
+                            </h5>
+                        </blockquote>
+                        <br>
+                        <figcaption class="blockquote-footer">
+                            <h6> <cite title="Source Title">
+                                    <%= post.content %>
+                                </cite></h6>
+
+                        </figcaption>
+                        <br>
+
+                        <a href="http://localhost:9000/posts"><button class="btn btn-primary btn-sm">Back to all
+                                posts</button></a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
